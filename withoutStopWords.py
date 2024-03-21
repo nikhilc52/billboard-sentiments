@@ -12,7 +12,6 @@ def edit_column(csv_file, column_index, edit_function):
         reader = csv.reader(file)
         data = list(reader)
         
-        # Apply the edit function to each row in the specified column
         for row in data:
             row[column_index] = edit_function(row[column_index])
     
