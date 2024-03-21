@@ -37,7 +37,7 @@ with open(file_path, mode='r', encoding='utf-8') as file:
     next(csv_reader, None)
     
     for row in csv_reader:
-        curr_year = row[year]
+        curr_year = int(row[year])
         curr_lyrics = row[lyrics]
         processed_lyrics = process_lyrics(curr_lyrics)
         diversity, average_word_length, reading_ease_score = analyze_lyrics(processed_lyrics)
@@ -67,7 +67,7 @@ plt.title('Trend of Average Word Complexity by Year')
 plt.xlabel('Year')
 plt.ylabel('Average World Complexity')
 
-plt.xticks(sorted_years, rotation='vertical')
+plt.xticks(range(min(sorted_years), max(sorted_years) + 1, 10), rotation='horizontal')
 
 plt.grid(True)
 
