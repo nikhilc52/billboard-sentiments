@@ -8,7 +8,7 @@ import csv
 
 year = 0
 lyrics = 4
-year_to_info = {}
+genre_to_info = {}
 file_path = 'finalMatched.csv'
 
 def process_lyrics(lyrics):
@@ -30,45 +30,48 @@ def calculate_complexity_score(diversity, average_word_length, reading_ease_scor
     composite_score = (diversity * weights[0]) + (average_word_length * weights[1]) - (normalized_reading_ease * weights[2])
     return composite_score
 
-
 with open(file_path, mode='r', encoding='utf-8') as file:
     csv_reader = csv.reader(file)
     
     next(csv_reader, None)
     
     for row in csv_reader:
-        curr_year = int(row[year])
-        curr_lyrics = row[lyrics]
+        curr_genre = row[23]
+        curr_lyrics = row[4]
         processed_lyrics = process_lyrics(curr_lyrics)
         diversity, average_word_length, reading_ease_score = analyze_lyrics(processed_lyrics)
         composite_score = calculate_complexity_score(diversity, average_word_length, reading_ease_score)
 
-        if curr_year not in year_to_info:
-            year_to_info[curr_year] = (0, 0)
+        if curr_genre not in genre_to_info:
+            genre_to_info[curr_genre] = [0, 0]
 
-        year_to_info[curr_year] = (year_to_info[curr_year][0] + 1, year_to_info[curr_year][1] + composite_score)
+        genre_to_info[curr_genre][0] += 1
+        genre_to_info[curr_genre][1] += composite_score
 
+genre_to_avg = {}
 
-year_to_avg = {}
-
-for year, info in year_to_info.items():
+for genre, info in genre_to_info.items():
     num_songs = info[0]
     total_flesch = info[1]
     avg_flesch = total_flesch / num_songs
-    year_to_avg[year] = avg_flesch
+    genre_to_avg[genre] = avg_flesch
 
-sorted_years = sorted(year_to_avg.keys())
-sorted_scores = [year_to_avg[year] for year in sorted_years]
+categories = genre_to_avg.keys()
+print("categories:", categories)
+values = [genre_to_avg[genre] for genre in categories]
 
-plt.figure(figsize=(10, 6))
-plt.plot(sorted_years, sorted_scores, marker='o', linestyle='-', color='b')
+# Creating the bar graph
+plt.figure(figsize=(10, 6))  # Optional: Specifies the figure size
+plt.bar(categories, values, color='skyblue')  # Creates the bar graph with skyblue bars
 
-plt.title('Trend of Average Word Complexity by Year')
-plt.xlabel('Year')
-plt.ylabel('Average World Complexity')
+# Adding labels and title
+plt.xlabel('Categories')  # X-axis label
+plt.ylabel('Values')  # Y-axis label
+plt.title('Bar Graph Example')  # Graph title
 
-plt.xticks(range(min(sorted_years), max(sorted_years) + 1, 10), rotation='horizontal')
+# Optional: Adding value labels on top of each bar
+for i, value in enumerate(values):
+    plt.text(i, value + 1, str(value), ha='center')
 
-plt.grid(True)
-
+# Showing the plot
 plt.show()
