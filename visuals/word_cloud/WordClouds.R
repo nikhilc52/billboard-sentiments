@@ -19,25 +19,25 @@ library(ggwordcloud)
 data <- read.csv("C:\\Users\\nikhi\\Downloads\\frequencyPerYearClean.csv")
 averages <- read.csv("C:\\Users\\nikhi\\Downloads\\averages.csv")
 
-
-cloud <- cloud |> 
-  group_by(Year) |> 
-  top_n(10, Count)
+###########################################
+#cloud <- cloud |> 
+#  group_by(Year) |> 
+#  top_n(10, Count)
 
 #write.csv(cloud, "C:\\Users\\nikhi\\Downloads\\cloud.csv", row.names=FALSE)
 
-set.seed(42)
-plot <- cloud  |> 
-  ggplot(aes(label = Word, size=Count)) +
-  geom_text_wordcloud() +
-  scale_size_area(max_size = 30) +
-  theme_minimal()
+#set.seed(42)
+#plot <- cloud  |> 
+#  ggplot(aes(label = Word, size=Count)) +
+#  geom_text_wordcloud() +
+# scale_size_area(max_size = 30) +
+#  theme_minimal()
 
 
-plot2 <- plot + transition_time(Year) +
-  labs(title = 'Year: {frame_time}')
+#plot2 <- plot + transition_time(Year) +
+#  labs(title = 'Year: {frame_time}')
 
-animate(plot2, fps = 1, end_pause=30)
+#animate(plot2, fps = 1, end_pause=30)
 
 ##################################
 set.seed(42)
@@ -59,15 +59,6 @@ plot2 <- plot + transition_time(Year) +
   )
   
 
-animate(plot2, fps=5, end_pause=30)
+animate(plot2, fps=5, height = 5,
+        width = 5, units = "in", res = 150)
 ###############################
-
-
-cloud |> 
-  ggplot(aes(x=Word, y=Count)) +
-  geom_segment( aes(x=Word, xend=Word, y=0, yend=Count)) +
-  geom_point( size=5, color="red", fill=alpha("orange", 0.3), alpha=0.7, shape=21, stroke=2)+
-  transition_time(Year)
-
-
-
