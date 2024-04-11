@@ -58,7 +58,11 @@ animation <- lines |>
   guides(color = guide_legend(title.position = "top", 
                               title.hjust = 0.5,
                               label.position = "bottom"))+
-  theme(legend.title = element_text( size=9), legend.text=element_text(size=9))
+  theme(legend.title = element_text( size=9), legend.text=element_text(size=9))+
+  theme(panel.background = element_rect(fill="white", color="white"))+
+  theme(plot.background = element_rect(fill="white", color="white"))+
+  theme(legend.background = element_rect(fill="white", color="white"))+
+  theme(legend.box.background = element_rect(fill="white", color="white"))
 
 
 
@@ -97,5 +101,4 @@ static <- lines |>
   theme(legend.background = element_rect(fill="white", color="white"))+
   theme(legend.box.background = element_rect(fill="white", color="white"))
 
-
-show(static)
+ggsave("static.png")
