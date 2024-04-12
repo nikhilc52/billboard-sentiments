@@ -11,7 +11,8 @@ All the files used in the Billboard Sentiments Project for Cornell Data Journal.
 * **Excel**: 
     * Organizing data used in Python and R
 * **Juypter Notebooks**
-    * Generating visuals through Python   
+    * Generating visuals through Python
+    * Scraping the data through NLTK and LyricsGenius
 * **Visual Studio Code**: 
     * Writing HTML, CSS, and JS code to build the site
     * Generating visuals through Python
