@@ -27,6 +27,7 @@ All the files used in the Billboard Sentiments Project for Cornell Data Journal.
 
 **Project lead**:
 * Nikhil Chinchalkar
+
 **Team members**:
 * Harriet Kumah
 * Ivan Xie
