@@ -104,7 +104,7 @@ animate(animation2, fps = 5, end_pause=30, height = 8,
 
 df |> 
   filter(!is.na(Compound.Score)) |>  
-  filter(Year == 1960) |> 
+  filter(Year == 2019) |> 
   ggplot(aes(x = energy, y = danceability))+
   geom_point(size=7, shape=20) + 
   scale_color_identity(aesthetics = c("fill","color"))+
@@ -114,7 +114,7 @@ df |>
   theme(axis.title = element_text())+
   ylab("Danceability") +
   xlab("Energy")+
-  labs(subtitle = 'Year: 1960')+
+  labs(subtitle = 'Year: 2019')+
   labs(title="Energy and Danceability of Top Songs Since 1960", 
        caption="By: Nikhil Chinchalkar\nData: Billboard 100, Spotify API, NTLK")+
   theme(plot.title = element_text(size = 22, hjust =0.5, face = "bold"), 
