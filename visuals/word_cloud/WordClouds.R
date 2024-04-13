@@ -19,6 +19,10 @@ library(ggwordcloud)
 data <- read.csv("C:\\Users\\nikhi\\Downloads\\frequencyPerYearClean.csv")
 averages <- read.csv("C:\\Users\\nikhi\\Downloads\\averages.csv")
 
+testing <- averages |> 
+  group_by(Year) |> 
+  top_n(1, Rolling.Average)
+
 ###########################################
 #cloud <- cloud |> 
 #  group_by(Year) |> 
@@ -59,6 +63,6 @@ plot2 <- plot + transition_time(Year) +
   )
   
 
-animate(plot2, fps=5, height = 5,
+animate(plot2, fps=5, height = 5, end_pause=25,
         width = 5, units = "in", res = 150)
 ###############################

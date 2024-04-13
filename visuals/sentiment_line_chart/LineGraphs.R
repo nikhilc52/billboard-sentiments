@@ -21,6 +21,15 @@ dataset <- dataset |>
   mutate(negative = ifelse(Compound.Score < 0, 1, 0)) |> 
   mutate(positive = ifelse(Compound.Score > 0, 1, 0))
 
+testing <- dataset |> 
+  filter(genre == "rap") |> 
+  summarize(
+    year= Year,
+    name = track,
+    artist = artist,
+    score = Compound.Score
+  )
+
 lines <- dataset |> 
   group_by(Year) |> 
   filter(!is.na(Compound.Score)) |> 
