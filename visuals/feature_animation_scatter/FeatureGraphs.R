@@ -97,3 +97,31 @@ animation2 <- point |>
 
 animate(animation2, fps = 5, end_pause=30, height = 8,
         width = 10, units = "in", res = 200)
+
+
+#################
+#static start/end
+
+df |> 
+  filter(!is.na(Compound.Score)) |>  
+  filter(Year == 1960) |> 
+  ggplot(aes(x = energy, y = danceability))+
+  geom_point(size=7, shape=20) + 
+  scale_color_identity(aesthetics = c("fill","color"))+
+  theme_fivethirtyeight()+  
+  scale_x_continuous(breaks=scales::pretty_breaks(n=8))+
+  scale_y_continuous(breaks=scales::pretty_breaks(n=8))+
+  theme(axis.title = element_text())+
+  ylab("Danceability") +
+  xlab("Energy")+
+  labs(subtitle = 'Year: 1960')+
+  labs(title="Energy and Danceability of Top Songs Since 1960", 
+       caption="By: Nikhil Chinchalkar\nData: Billboard 100, Spotify API, NTLK")+
+  theme(plot.title = element_text(size = 22, hjust =0.5, face = "bold"), 
+        plot.subtitle = element_text(size = 16, hjust =0.5))+
+  xlim(0,1)+
+  ylim(0,1)+
+  theme(panel.background = element_rect(fill="white", color="white"))+
+  theme(plot.background = element_rect(fill="white", color="white"))+
+  theme(legend.background = element_rect(fill="white", color="white"))+
+  theme(legend.box.background = element_rect(fill="white", color="white"))
