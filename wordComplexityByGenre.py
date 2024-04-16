@@ -62,12 +62,16 @@ values = [genre_to_avg[genre] for genre in categories]
 
 # Creating the bar graph
 plt.figure(figsize=(10, 6))  # Optional: Specifies the figure size
-plt.bar(categories, values, color='skyblue')  # Creates the bar graph with skyblue bars
+plt.bar(categories, values, color='#cc489c')  # Creates the bar graph with skyblue bars
+
 
 # Adding labels and title
-plt.xlabel('Categories')  # X-axis label
-plt.ylabel('Values')  # Y-axis label
-plt.title('Bar Graph Example')  # Graph title
+plt.xlabel('Genres')  # X-axis label
+plt.ylabel('Complexity')  # Y-axis label
+plt.title('Average Complexity by Genre')
+
+byline = "By: Stuti Gupta"
+plt.figtext(0.95, 0.01, byline, fontsize=10, ha='right', va='bottom')
 
 # Optional: Adding value labels on top of each bar
 for i, value in enumerate(values):
