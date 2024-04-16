@@ -24,7 +24,7 @@ export function Logo(props: LogoProps): JSX.Element {
         <BrightnessAutoRounded />
       </IconButton>
       <Typography sx={{ fontSize: "1.25rem" }} level="h4" component="div">
-        {import.meta.env.VITE_APP_NAME}
+        {"CDJ"} {/* import.meta.env.VITE_APP_NAME */}
       </Typography>
     </Box>
   );

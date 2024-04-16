@@ -5,6 +5,8 @@ import {
   AssignmentTurnedInRounded,
   ChatRounded,
   Dashboard,
+  AddchartIcon,
+  AutoGraphIcon
 } from "@mui/icons-material";
 import {
   List,
@@ -31,11 +33,13 @@ export const Navigation = memo(function Navigation(
     >
       <NavItem path="/dashboard" label="Dashboard" icon={<Dashboard />} />
       <NavItem
-        path="/tasks"
-        label="Tasks"
+        path="/preliminary"
+        label="Preliminary Research"
         icon={<AssignmentTurnedInRounded />}
       />
-      <NavItem path="/messages" label="Messages" icon={<ChatRounded />} />
+      <NavItem path="/ourdata" label="Our Data" icon={<ChatRounded /* AddchartIcon */ />} />
+      <NavItem path="/analysis" label="Analysis" icon={<ChatRounded /* AddchartIcon */ />} />
+      <NavItem path="/future" label="Future Prospects" icon={<ChatRounded /* AutoGraphIcon */ />} />
     </List>
   );
 });
