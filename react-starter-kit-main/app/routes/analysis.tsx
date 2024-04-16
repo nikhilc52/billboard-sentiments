@@ -19,7 +19,7 @@ export const Component = function Analysis(): JSX.Element {
       <Typography level="h2" gutterBottom>
         Exploratory Analysis
       </Typography>
-      <Typography>TOOD: influce of rap on the top 100 songs...</Typography>
+      <Typography>TOOD: influence of rap on the top 100 songs...</Typography>
       <br />
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <img src={sentimentLineGIF} alt="sentimentLineGIF"

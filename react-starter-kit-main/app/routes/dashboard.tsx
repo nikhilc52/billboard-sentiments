@@ -68,36 +68,6 @@ export const Component = function Dashboard(): JSX.Element {
 
         <Card>
           <CardContent sx={{ minHeight: 150 }}>
-            <Typography level="h3">Breakdown by Decade</Typography>
-            <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Typography>
-            <br />
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent sx={{ minHeight: 150 }}>
-            <Typography level="h3">Danceability Through The Years</Typography>
-            <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Typography>
-            <br />
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent sx={{ minHeight: 150 }}>
             <Typography level="h3">Sentiment Over the Years</Typography>
             <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -149,6 +119,36 @@ export const Component = function Dashboard(): JSX.Element {
               <img src={danceability} alt="danceability" style={{ maxWidth: '45%', maxHeight: '100%', marginRight: '20px' }} />
               <img src={speechiness} alt="speechiness" style={{ maxWidth: '45%', maxHeight: '100%', marginLeft: '20px' }} />
             </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent sx={{ minHeight: 150 }}>
+            <Typography level="h3">Breakdown by Decade</Typography>
+            <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Typography>
+            <br />
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent sx={{ minHeight: 150 }}>
+            <Typography level="h3">Danceability Through The Years</Typography>
+            <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </Typography>
+            <br />
           </CardContent>
         </Card>
 
