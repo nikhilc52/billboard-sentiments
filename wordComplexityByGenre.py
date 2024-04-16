@@ -42,11 +42,12 @@ with open(file_path, mode='r', encoding='utf-8') as file:
         diversity, average_word_length, reading_ease_score = analyze_lyrics(processed_lyrics)
         composite_score = calculate_complexity_score(diversity, average_word_length, reading_ease_score)
 
-        if curr_genre not in genre_to_info:
-            genre_to_info[curr_genre] = [0, 0]
+        if curr_genre != "":
+            if curr_genre not in genre_to_info:
+                genre_to_info[curr_genre] = [0, 0]
 
-        genre_to_info[curr_genre][0] += 1
-        genre_to_info[curr_genre][1] += composite_score
+            genre_to_info[curr_genre][0] += 1
+            genre_to_info[curr_genre][1] += composite_score
 
 genre_to_avg = {}
 
