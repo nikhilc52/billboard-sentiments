@@ -21,7 +21,7 @@ export function Logo(props: LogoProps): JSX.Element {
       {...other}
     >
       <IconButton component={Link} to="/" color="primary" variant="soft">
-        <BrightnessAutoRounded />
+        <img src='../icons/cdj_logo.svg' alt="cdj_logo" />
       </IconButton>
       <Typography sx={{ fontSize: "1.25rem" }} level="h4" component="div">
         {"CDJ"} {/* import.meta.env.VITE_APP_NAME */}

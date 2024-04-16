@@ -20,7 +20,7 @@ export const Component = function Dashboard(): JSX.Element {
   return (
     <Container sx={{ py: 2 }}>
       <Typography sx={{ mb: 2 }} level="h2">
-        CDJ SP24: Billboard Sentiments
+        SP24: Billboard Sentiments
       </Typography>
 
       <Box
