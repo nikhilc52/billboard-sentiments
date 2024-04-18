@@ -34,7 +34,7 @@
   <body>
     <!-- Sidebar/menu -->
     <nav
-      class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding"
+      class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding"
       style="z-index: 3; width: 300px; font-weight: bold; display: none"
       id="mySidebar"
     >
@@ -48,7 +48,8 @@
       >
       <div class="w3-container">
         <h3 class="w3-padding-64">
-          <b>Company<br />Name</b>
+          <img src="./icons/cdj_logo.svg" style="width: 10%" alt="CDJ LOGO" />
+          <b>CDJ</b>
         </h3>
       </div>
       <div class="w3-bar-block">
@@ -93,11 +94,11 @@
 
     <!-- Top menu on small screens -->
     <header
-      class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding"
+      class="w3-container w3-top w3-hide-large w3-blue w3-xlarge w3-padding"
     >
       <a
         href="javascript:void(0)"
-        class="w3-button w3-red w3-margin-right"
+        class="w3-button w3-blue w3-margin-right"
         onclick="w3_open()"
         >☰</a
       >
@@ -117,52 +118,52 @@
     <div class="w3-main" style="margin-left: 340px; margin-right: 40px">
       <!-- Header -->
       <div class="w3-container" style="margin-top: 80px" id="showcase">
-        <h1 class="w3-jumbo"><b>Interior Design</b></h1>
-        <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
-        <hr style="width: 50px; border: 5px solid red" class="w3-round" />
+        <h1 class="w3-jumbo"><b>Billboard Sentiments</b></h1>
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Spring 2024</b></h1>
+        <hr style="width: 50px; border: 5px solid blue" class="w3-round" />
       </div>
 
       <!-- Photo grid (modal) -->
       <div class="w3-row-padding">
         <div class="w3-half">
           <img
-            src="/w3images/kitchenconcrete.jpg"
+            src="./visuals/feature_animation_scatter/final_visual_end_pause.gif"
             style="width: 100%"
             onclick="onClick(this)"
-            alt="Concrete meets bricks"
+            alt="energy scatter"
           />
           <img
-            src="/w3images/livingroom.jpg"
+            src="./visuals/dance_speech/danceability.png"
             style="width: 100%"
             onclick="onClick(this)"
-            alt="Light, white and tight scandinavian design"
+            alt="danceability"
           />
           <img
-            src="/w3images/diningroom.jpg"
+            src="./visuals/word_cloud/final_visual_end_pause.gif"
             style="width: 100%"
             onclick="onClick(this)"
-            alt="White walls with designer chairs"
+            alt="word cloud"
           />
         </div>
 
         <div class="w3-half">
           <img
-            src="/w3images/atrium.jpg"
+            src="./visuals/sentiment_line_chart/final_visual.gif"
             style="width: 100%"
             onclick="onClick(this)"
-            alt="Windows for the atrium"
+            alt="sentiment line chart"
           />
           <img
-            src="/w3images/bedroom.jpg"
+            src="./visuals/dance_speech/speechiness.png"
             style="width: 100%"
             onclick="onClick(this)"
-            alt="Bedroom and office in one space"
+            alt="speechiness"
           />
           <img
-            src="/w3images/livingroom2.jpg"
+            src="./visuals/word_complexity_by_year/word_complexity_by_year.png"
             style="width: 100%"
             onclick="onClick(this)"
-            alt="Scandinavian design"
+            alt="word complexity"
           />
         </div>
       </div>
@@ -171,22 +172,26 @@
       <div
         id="modal01"
         class="w3-modal w3-black"
-        style="padding-top: 0"
+        style="padding-top: 0px; display: none"
         onclick="this.style.display='none'"
       >
         <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
         <div
           class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
         >
-          <img id="img01" class="w3-image" />
-          <p id="caption"></p>
+          <img
+            id="img01"
+            class="w3-image"
+            src="file:///w3images/kitchenconcrete.jpg"
+          />
+          <p id="caption">Concrete meets bricks</p>
         </div>
       </div>
 
       <!-- Services -->
       <div class="w3-container" id="services" style="margin-top: 75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
-        <hr style="width: 50px; border: 5px solid red" class="w3-round" />
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Services.</b></h1>
+        <hr style="width: 50px; border: 5px solid blue" class="w3-round" />
         <p>
           We are a interior design service that focus on what's best for your
           home and what's best for you!
@@ -208,8 +213,8 @@
 
       <!-- Designers -->
       <div class="w3-container" id="designers" style="margin-top: 75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Designers.</b></h1>
-        <hr style="width: 50px; border: 5px solid red" class="w3-round" />
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Designers.</b></h1>
+        <hr style="width: 50px; border: 5px solid blue" class="w3-round" />
         <p>The best team in the world.</p>
         <p>
           We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
@@ -270,8 +275,8 @@
 
       <!-- Packages / Pricing Tables -->
       <div class="w3-container" id="packages" style="margin-top: 75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Packages.</b></h1>
-        <hr style="width: 50px; border: 5px solid red" class="w3-round" />
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Packages.</b></h1>
+        <hr style="width: 50px; border: 5px solid blue" class="w3-round" />
         <p>
           Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -305,7 +310,7 @@
 
         <div class="w3-half">
           <ul class="w3-ul w3-light-grey w3-center">
-            <li class="w3-red w3-xlarge w3-padding-32">Pro</li>
+            <li class="w3-blue w3-xlarge w3-padding-32">Pro</li>
             <li class="w3-padding-16">Floorplanning</li>
             <li class="w3-padding-16">50 hours support</li>
             <li class="w3-padding-16">Photography</li>
@@ -316,7 +321,7 @@
               <span class="w3-opacity">per room</span>
             </li>
             <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-red w3-padding-large w3-hover-black">
+              <button class="w3-button w3-blue w3-padding-large w3-hover-black">
                 Sign Up
               </button>
             </li>
@@ -326,8 +331,8 @@
 
       <!-- Contact -->
       <div class="w3-container" id="contact" style="margin-top: 75px">
-        <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
-        <hr style="width: 50px; border: 5px solid red" class="w3-round" />
+        <h1 class="w3-xxxlarge w3-text-blue"><b>Contact.</b></h1>
+        <hr style="width: 50px; border: 5px solid blue" class="w3-round" />
         <p>
           Do you want us to style your home? Fill out the form and fill me in
           with the details :) We love meeting new people!
@@ -339,7 +344,7 @@
               class="w3-input w3-border"
               type="text"
               name="Name"
-              required=""
+              requiblue=""
             />
           </div>
           <div class="w3-section">
@@ -348,7 +353,7 @@
               class="w3-input w3-border"
               type="text"
               name="Email"
-              required=""
+              requiblue=""
             />
           </div>
           <div class="w3-section">
@@ -357,12 +362,12 @@
               class="w3-input w3-border"
               type="text"
               name="Message"
-              required=""
+              requiblue=""
             />
           </div>
           <button
             type="submit"
-            class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom"
+            class="w3-button w3-block w3-padding-large w3-blue w3-margin-bottom"
           >
             Send Message
           </button>
@@ -378,7 +383,7 @@
       style="margin-top: 75px; padding-right: 58px"
     >
       <p class="w3-right">
-        Powered by
+        Poweblue by
         <a
           href="https://www.w3schools.com/w3css/default.asp"
           title="W3.CSS"
