@@ -1,7 +1,8 @@
 /* SPDX-FileCopyrightText: 2014-present Kriasoft */
 /* SPDX-License-Identifier: MIT */
 
-import { Box, Card, CardContent, Container, Typography } from "@mui/joy";
+import { useState } from 'react'
+import { Box, Card, CardContent, Container, Typography, Slider } from "@mui/joy";
 import { usePageEffect } from "../core/page";
 import featureAnimationScatter from '../visuals/feature_animation_scatter/end.png';
 import featureAnimationScatterGIF from '../visuals/feature_animation_scatter/final_visual_end_pause.gif';
@@ -10,19 +11,25 @@ import sentimentLineGIF from '../visuals/sentiment_line_chart/final_visual.gif';
 import wordComplexityByYear from '../visuals/word_complexity_by_year/word_complexity_by_year.png';
 import danceability from '../visuals/dance_speech/danceability.png';
 import speechiness from '../visuals/dance_speech/speechiness.png';
-
+import MySlider from '../components/MySlider'; // Importing MySlider component from MySlider.tsx
 
 export const Component = function Dashboard(): JSX.Element {
   usePageEffect({ title: "Dashboard" });
 
+  const [year, setYear] = useState<number>(1960);
 
+  const handleChange = (event: Event, newValue: number | number[]) => {
+    setYear(newValue as number);
+  };
+
+  const frameNumber = year - 1960;
+  const gifSrc = `${featureAnimationScatterGIF}?frame=${frameNumber}`;
 
   return (
     <Container sx={{ py: 2 }}>
       <Typography sx={{ mb: 2 }} level="h2">
         SP24: Billboard Sentiments
       </Typography>
-
       <Box
         sx={{
           display: "grid",
@@ -43,8 +50,18 @@ export const Component = function Dashboard(): JSX.Element {
             <br />
             <div style={{ display: 'flex', justifyContent: 'center' }}>
               <img src={featureAnimationScatter} alt="feature_animation_scatter" style={{ maxWidth: '45%', maxHeight: '100%', marginRight: '20px' }} />
-              <img src={featureAnimationScatterGIF} alt="feature_animation_scatter_GIF" style={{ maxWidth: '45%', maxHeight: '100%', marginLeft: '20px' }} />
+              <img src={gifSrc} alt="feature_animation_scatter_GIF" style={{ maxWidth: '45%', maxHeight: '100%', marginLeft: '20px' }} />
             </div>
+            <div style={{ margin: '0 50px' }}>
+              <Slider
+                value={year}
+                onChange={handleChange}
+                aria-labelledby="continuous-slider"
+                min={1960}
+                max={2019}
+              />
+            </div>
+            <p>Current year: {year}</p>
           </CardContent>
         </Card>
 
