@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../newstyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writeup</title>
+    <link rel="icon" type="image/png" href="../icons/billboard sentiments logo.png">
+</head>
+
+<div class="page" id="eda"></div>
+
+<div class="image-container">
+    <img src="../icons/alternate billboard sentiments logo.png" width="50%">
+</div>
+
+<div class="topnav">
+    <a href="../index.html"><b>Introduction</b></a>
+    <a href="../essay.html"><b>Essay</b></a>
+    <a href="../dashboard.html"><b>Dashboard</b></a>
+    <a href="../about.html"><b>About</b></a>
+</div>
+
+<body>
+    <br><br>
+
+    <div class="slider-image">
+        <img id="imageToChange" src="sliders/energy_danceability/1960.png" alt="image_year" width=40%
+            onmouseover="src='../visuals/feature_animation_scatter/scatter_end_pause.gif';"
+            onmouseout="src='sliders/energy_danceability/1960.png';">
+
+        <figcaption style="text-align: center; font-size: small;"><i>Hover over the above image to play the animation.
+                <br>Or use the slider below to adjust the year more precisely.
+            </i></figcaption>
+
+        <br>
+
+        <input type="range" id="yearID" min="1960" max="2019" value="1960" class="slider" oninput=updateImage()>
+    </div>
+
+    <br><br>
+
+    <div class="text-container">
+        <p>Here is a combined look at the energy and danceability of Top 100 Songs.
+            While the graph has a lot of moving parts, the takeaway is clear:
+            songs have become both more danceable and energetic over time, as
+            the dots have moved to the top left in tandem with the warm-colored
+            line that shows the average value of their movements.</p>
+    </div>
+
+    <br><br>
+
+    <div class="image-container">
+        <img src="../visuals/feature_animation_scatter/scatter_start.png" width="30%">
+        <img src="../visuals/feature_animation_scatter/scatter_end.png" width="30%">
+    </div>
+
+    <br><br>
+
+    <div class="text-container">
+        <p>The two charts above make this change clear - on the left is the furthest the data goes back (1960).
+            Notice that the bottom left quadrant is filled with dots (songs). Compare this to the chart on the
+            right, which shows only one song (Billie Eilish’s “when the party's over”) in the lower left quadrant
+            that was once heavily occupied, showing a movement away from undanceable and low-energy songs.
+        </p>
+    </div>
+
+    <br><br>
+
+</body>
+
+<script src="../slider.js"></script>
