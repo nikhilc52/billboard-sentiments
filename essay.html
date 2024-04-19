@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="website/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essay</title>
+</head>
+
+<div class="page" id="eda"></div>
+
+<div class="topnav">
+  <a href="index.html">Introduction</a>
+  <a href="essay.html">Essay</a>
+  <a href="dashboard.html">Dashboard</a>
+</div>
+
+<body>
+
+  <header>
+    <h1>Billboard Sentiments</h1>
+  </header>
+
+  <main>
+    <section class="introduction">
+      <p>To Do: 1) Section different parts into different pages</p>
+      <p>2) Finish adding in rest of visualizations + descriptions</p>
+      <p></p>3) Add more interactive components</p>
+      <p>Update all pages to most recent writeups</p>
+    </section>
+
+    <section class="text-section">
+      <h2>1. Sentiment of the Billboard Top 100</h2>
+      <div class="visualization" id="visualization1">
+        <img id="sentiment-png" src="sentiment_graph.png" alt="Sentiment Graph">
+      </div>
+      <p>The above graph depicts a 5-year rolling average of the percentage of positive and negative songs within the
+        end-of-year Billboard Top 100. It should be noted that certain songs were excluded from the data since they
+        could not be matched to lyrics and thus could not be scored, which explains why some years might not have a
+        percentage of positive and negative songs that add up to 100.</p>
+
+      <p>While there are certainly fluctuations in sentiment over time, there is a general trend of negativity being
+        more
+        commonly found in top songs, with a visible shift being apparent at the turn of the century. This trend of
+        negativity
+        has continued into the songs themselves, that is, just as the makeup of Billboard songs have become more
+        negative,
+        the songs that are classified as negative (with a negative sentiment score) have been more extreme. For
+        instance, in 1960,
+        the average negative song had a score of -0.77, a much less negative sentiment than the 2015 -0.92.</p>
+
+      <p>There are a number of reasons for such a drastic increase in negativity, one of which being the introduction of
+        rap
+        into mainstream culture. Since 2000, there has been an average of more than 12 songs classified as “rap” by
+        Spotify,
+        a stark increase from the mere three Top-100 placements the genre averaged before the 21st century. The
+        correlation
+        between the two trends is certainly interesting, but that is not to say that rap is inherently negative.
+        Instead, looking
+        at certain examples can help to paint a more clear picture of how rap has influenced total Billboard sentiment.
+      </p>
+
+      <p>In the 335 rap songs featured in our dataset, two songs stick out for their sentiment scores in relation to
+        their
+        personally-derived messaging. These songs are “Lifestyle” by Rich Gang and “Forever” by Drake. Charting in 2014
+        and 2009,
+        with sentiment scores of -0.9114 and -0.9992, respectively. From reading the scores, we would expect the songs
+        to be undoubtedly
+        negative, but having listened to them, they are certainly not as cynical as one would expect.</p>
+
+      <p><em>Lifestyle</em> features multiple artists rapping about how they overcame certain struggles in their past
+        lives,
+        ultimately
+        earning themselves a luxurious lifestyle:</p>
+
+      <div class="lyrics">
+        <p><em>"I done (Hey), did a lot of shit just to live this here lifestyle (Oh, yeah, woo)<br>
+            We came straight from the bottom to the top, my lifestyle (Lifestyle, ayy)"</em></p>
+      </div>
+
+      <p>“Forever” is a similar record, featuring artists like Lil Wayne, Kanye West, and Eminem orating their desire
+        for eternal
+        success as their had previously had nothing:</p>
+
+      <div class="lyrics">
+        <p><em>"But understand, nothin' was done for me<br>
+            So I don't plan on stoppin' at all<br>
+            I want this shit forever, mane"</em></p>
+      </div>
+
+      <p>Despite the seemingly obvious positive messages these songs depict, their scores indicate the exact opposite.
+        One reason for
+        this inaccuracy might be due to NLTK’s treatment of expletives. For experiment’s sake (as purposefully removing
+        data is unethical),
+        removing expletives from each of the songs, and feeding them back into NLTK’s library yields much more
+        understandable scores of 0.9973
+        for “Lifestyle” and 0.9737 for “Forever”, indicating that there is a strong negative weightage that NLTK places
+        on these types of words.</p>
+
+      <p>Whether or not this is a fair judgment is a personal question that depends on one’s own emotions towards strong
+        language and
+        whether or not they believe profanity can taint a positive message. For NLTK, it believes that profanity is
+        always negative, and
+        this understanding can help to clear up the scores for rap songs and the corresponding increase in negativity:
+        rap is not inherently
+        negative, but the positive messages it communicates are often accompanied by expletives, typically at a higher
+        rate than other genres.
+        This means that NLTK views rap as more negative than other types of music (not for its message, but for its
+        delivery), and thus when rap
+        is featured in the Billboard charts more frequently, the overall Billboard sentiment decreases - once again, not
+        inherently because of
+        its genre, but because of NLTK’s “personal” opinion on word choice.</p>
+    </section>
+
+    <section class="text-section">
+      <h2>2. Top Words of Billboard Songs</h2>
+      <div class="visualization" id="visualization2">
+        <img id="top_words-gif" src="top_words.gif" alt="Data Visualization 2">
+      </div>
+      <p> Above is a word cloud that shows a 5-year rolling average of the top words of Billboard Top-100 songs for a
+        given year. The most common word in top songs was “love” until 1998, where it switched to “na” before being
+        dominated by “like” and
+        “yeah”, a trend that continues into 2024.</p>
+
+      <p>The aforementioned idea of the rise of rap music coinciding with more frequent uses of expletives is confirmed
+        by
+        this chart, as near
+        the end of the 2010s, we see a few instances of profanity being used at high rates in top songs, once again
+        mirroring the timeline of
+        the growth of rap.</p>
+
+      <p>An interesting development within this data is the short period of time where “na” was the top word. While it
+        has
+        almost always been included in the top 100 songs, dating back to 1963, its dominance in the late 1990s can be
+        traced back to a
+        singular song, “Here Comes the Hotstepper”, which features the word “na” 79 times, predominantly featured in its
+        well-known chorus. Released
+        in 1994, this song would chart twice on the year-end Billboard Top 100, once in 1994 and once in 1995. The
+        song’s
+        use of “na” at such
+        a high frequency coupled with its above-average longevity on the Top 100 made it have a substantial impact on
+        our
+        data, so much so
+        that it changed the most used word for 4 consecutive years (since rolling averages were used). More than just a
+        cool data-driven
+        story, “Here Comes the Hotstepper” shows just how much one song can influence culture, as even after the song
+        dropped out of the charts,
+        its success likely contributed to other artists mimicking the song’s style, which is evident in the continued
+        frequency of the word
+        into the early 2000s.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Cornell Data Journal - Spring 2024</p>
+  </footer>
+
+</body>
+
+</html>
