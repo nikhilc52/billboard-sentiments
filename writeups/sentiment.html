@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../newstyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writeup</title>
+    <link rel="icon" type="image/png" href="../icons/billboard sentiments_colors.png">
+</head>
+
+<div class="page" id="eda"></div>
+
+<div class="image-container">
+    <img src="../icons/alternate billboard sentiments logo.png" width="50%">
+</div>
+
+<div class="topnav">
+    <a href="../index.html"><b>Introduction</b></a>
+    <a href="../essay.html"><b>Essay</b></a>
+    <a href="../dashboard/index.html"><b>Dashboard</b></a>
+    <a href="../about.html"><b>About</b></a>
+</div>
+
+<body>
+    <br><br>
+
+    <div class="slider-image">
+        <img id="imageToChange" src="sliders/sentiment_line/1964.png" alt="image_year" width="30%"
+            onmouseover="src='../visuals/sentiment_line_chart/sentiment_line_chart_pause.gif'"
+            onmouseout="src='sliders/sentiment_line/1964.png'">
+    </div>
+
+    <figcaption style="text-align: center; font-size: small;"><i><br>Hover over the above image to play the animation.
+            <br>Or use the slider below to adjust the year more precisely.
+        </i></figcaption>
+
+    <br>
+
+    <input type="range" id="yearID" min="1964" max="2019" value="1964" class="slider" oninput=updateImage()>
+
+    <br><br>
+
+    <div class="text-container">
+        <p>Insert writeup here.</p>
+    </div>
+
+    <p align="center"><br><i>To read more about this graph in the larger context of the entire project, read the <a
+        href="../essay.html">essay</a>.</i></p>
+
+    <br><br>
+
+</body>
+
+<script src="../slider.js"></script>
