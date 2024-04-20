@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Writeup</title>
-    <link rel="icon" type="image/png" href="../icons/billboard sentiments colors.png">
+    <link rel="icon" type="image/png" href="../icons/billboard sentiments_colors.png">
 </head>
 
 <div class="page" id="eda"></div>
@@ -26,18 +26,18 @@
     <br><br>
 
     <div class="slider-image">
-        <img id="imageToChange" src="sliders/energy_danceability/1960.png" alt="image_year" width=40%
-            onmouseover="src='../visuals/feature_animation_scatter/scatter_end_pause.gif';"
-            onmouseout="src='sliders/energy_danceability/1960.png';">
-
-        <figcaption style="text-align: center; font-size: small;"><i>Hover over the above image to play the animation.
-                <br>Or use the slider below to adjust the year more precisely.
-            </i></figcaption>
-
-        <br>
-
-        <input type="range" id="yearID" min="1960" max="2019" value="1960" class="slider" oninput=updateImage()>
+        <img id="imageToChange" src="sliders/word_cloud/1964.png" alt="image_year" width="30%"
+            onmouseover="src='../visuals/word_cloud/word_cloud_pause.gif';"
+            onmouseout="src='sliders/word_cloud/1964.png';">
     </div>
+
+    <figcaption style="text-align: center; font-size: small;"><i><br>Hover over the above image to play the animation.
+            <br>Or use the slider below to adjust the year more precisely.
+        </i></figcaption>
+
+    <br>
+
+    <input type="range" id="yearID" min="1964" max="2023" value="1964" class="slider" oninput=updateImage()>
 
     <br><br>
 
@@ -47,7 +47,8 @@
             dominated by “like” and “yeah”, a trend that continues into 2024.<br><br>An interesting development within
             this data is the short period of time where “na” was the top word. While
             it has almost always been included in the top 100 songs, dating back to 1963, its dominance in the late
-            1990s can be traced back to a singular song, “Here Comes the Hotstepper”, which features the word “na” 79
+            1990s can be traced back to a singular song, “<a href="https://www.youtube.com/watch?v=w0N4twV28Mw"
+                target="_blank">Here Comes the Hotstepper</a>”, which features the word “na” 79
             times, predominantly featured in its well-known chorus. <br><br>Released in 1994, this song would chart
             twice on the
             year-end Billboard Top 100, once in 1994 and once in 1995. The song’s use of “na” at such a high frequency
