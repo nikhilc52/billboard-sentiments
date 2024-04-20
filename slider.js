@@ -12,3 +12,11 @@ function updateImage2() {
     var imageName = directory + "/" + frameID + ".png";
     document.getElementById("imageToChange2").src = imageName;
 }
+
+//separate function for instances where mutliple sliders are needed on 1 page (since elements are not unique)
+function updateImage3() {
+    var frameID = document.getElementById("yearID3").value;
+    var directory = document.getElementById("imageToChange3").src.substring(0,document.getElementById("imageToChange3").src.lastIndexOf("/"));
+    var imageName = directory + "/" + frameID + ".png";
+    document.getElementById("imageToChange3").src = imageName;
+}
