@@ -75,7 +75,7 @@ animation <- lines |>
 
 
 
-animate(animation, fps = 5, duration = 15, end_pause=5, height = 7,
+animate(animation, fps = 7, duration = 8,height = 7,
         width = 9, units = "in", res = 200)
 
 ###############################
