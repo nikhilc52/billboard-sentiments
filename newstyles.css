@@ -9,7 +9,7 @@
 
 .topnav a {
     float: left;
-    color: black   ;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -43,10 +43,15 @@ h6,
     margin-top: 10px;
 }
 
-.slider-image img {
-    position: relative;
-    left: 30%;
-    right: 30%;
+#imageToChange {
+    max-width: 100%;
+    align-items: center;
+}
+
+.slider-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-container {
@@ -63,11 +68,11 @@ a {
     color: inherit;
 }
 
-.slider{
+.slider {
     -webkit-appearance: none;
     background-color: #f2f2f2;
     display: flex;
-    width:70%;
+    width: 70%;
     position: relative;
     left: 15%;
     right: 15%;
@@ -77,7 +82,7 @@ a {
     -webkit-appearance: none;
     width: 18px;
     height: 18px;
-    border-radius: 50%; 
-    background: #52b5e7    ;
+    border-radius: 50%;
+    background: #52b5e7;
     cursor: pointer;
-  }
+}
