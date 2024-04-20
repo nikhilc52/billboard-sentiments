@@ -63,6 +63,6 @@ plot2 <- plot + transition_time(Year) +
   )
   
 
-animate(plot2, fps=5, height = 5, end_pause=25,
+animate(plot2, fps=5, height = 5, duration = 12,
         width = 5, units = "in", res = 150)
 ###############################
