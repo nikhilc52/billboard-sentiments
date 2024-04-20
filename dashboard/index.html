@@ -48,6 +48,38 @@
 				</header>
 				<section class="tiles">
 
+					<article class="style1"
+						onmouseenter="changeImage('line', '../visuals/sentiment_line_chart/sentiment_line_chart_square.gif')"
+						onmouseleave="changeImage('line', '../visuals/sentiment_line_chart/sentiment_line_chart_square_endframe.png')">
+						<span class="image">
+							<img id='line' src="../visuals/sentiment_line_chart/sentiment_line_chart_square_endframe.png" alt="" />
+						</span>
+						</span>
+						<a href="generic.html"></a>
+						</a>
+					</article>
+
+					<article class="style1"
+						onmouseenter="changeImage('scatter', '../visuals/feature_animation_scatter/scatter_square.gif')"
+						onmouseleave="changeImage('scatter', '../visuals/feature_animation_scatter/scatter_square_frame1.png')">
+						<span class="image">
+							<img id='scatter' src="../visuals/feature_animation_scatter/scatter_square_frame1.png" alt="" />
+						</span>
+						</span>
+						<a href="https://nikhilc52.github.io/billboard-sentiments/writeups/energy_danceability.html">
+						</a>
+					</article>
+
+					<article class="style1" onmouseenter="changeImage('pie', '../visuals/pie_chart_year/pie_chart_square.gif')"
+						onmouseleave="changeImage('pie', '../visuals/pie_chart_year/pie_chart_square_frame1.png')">
+						<span class="image">
+							<img id='pie' src="../visuals/pie_chart_year/pie_chart_square_frame1.png" alt="" />
+						</span>
+						</span>
+						<a href="generic.html">
+						</a>
+					</article>
+
 					<article class="style1">
 						<span class="image">
 							<img src="../visuals/bar_graph_genre/bar_graph_genre_square.png" alt="" />
@@ -56,35 +88,12 @@
 						</a>
 					</article>
 
-					<article class="style1">
+					<article class="style1"
+						onmouseenter="changeImage('word_cloud', '../visuals/word_cloud/word_cloud_square.gif')"
+						onmouseleave="changeImage('word_cloud', '../visuals/word_cloud/word_cloud_square_frame1.png')">
 						<span class="image">
-							<img src="../visuals/feature_animation_scatter/scatter_frame1_square.png" alt="" />
+							<img id='word_cloud' src="../visuals/word_cloud/word_cloud_square_frame1.png" alt="" />
 						</span>
-						<a href="generic.html">
-						</a>
-					</article>
-
-					<article class="style1">
-						<span class="image">
-							<img src="../visuals/pie_chart_year/pie_chart_square.gif" alt="" />
-						</span>
-						<a href="generic.html">
-						</a>
-					</article>
-
-					<article class="style1">
-
-						<span class="image">
-							<img src="../visuals/sentiment_line_chart/sentiment_line_chart_square.gif" alt="" />
-						</span>
-
-						<a href="generic.html">
-						</a>
-					</article>
-
-					<article class="style1">
-						<span class="image">
-							<img src="../visuals/word_cloud/word_cloud.gif" alt="" />
 						</span>
 						<a href="generic.html">
 						</a>
@@ -100,7 +109,7 @@
 
 					<article class="style1">
 						<span class="image">
-							<img src="../visuals/word_complexity_by_year/word_complexity_by_year_square.png" alt="" />
+							<img src="../visuals/dance_speech/danceability_square.png" alt="" />
 						</span>
 						<a href="generic.html">
 						</a>
@@ -108,7 +117,7 @@
 
 					<article class="style1">
 						<span class="image">
-							<img src="../visuals/dance_speech/danceability_square.png" alt="" />
+							<img src="../visuals/word_complexity_by_year/word_complexity_by_year_square.png" alt="" />
 						</span>
 						<a href="generic.html">
 						</a>
@@ -123,27 +132,6 @@
 					</article>
 
 					<article class="style1">
-						<span class="image">
-							<img src="images/pic10.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Ultricies</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
-					</article>
-
-					<article class="style1">
-						<span class="image">
-							<img src="images/pic11.jpg" alt="" />
-						</span>
-						<a href="generic.html">
-							<h2>Dictum</h2>
-							<div class="content">
-								<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-							</div>
-						</a>
 					</article>
 
 					<article class="style1">
@@ -172,6 +160,12 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		function changeImage(id, source) {
+			var img = document.getElementById(id);
+			img.src = source;
+		}
+	</script>
 
 </body>
 
