@@ -3436,3 +3436,37 @@ body.is-menu-visible #menu .close {
 
 /* new styles */
 
+
+.topnav {
+	display: flex;
+	background-color: #f2f2f2;
+	justify-content: space-evenly;
+	align-items: center;
+	overflow: hidden;
+	align-items: center;
+}
+
+.topnav a {
+	float: left;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav a:hover {
+	background-color: black;
+	color: white !important;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.topnav {
+	font-family: Helvetica, Arial, sans-serif;
+}
