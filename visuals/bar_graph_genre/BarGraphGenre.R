@@ -29,20 +29,20 @@ bar_decade <- bar %>%
   
 
 
-bar_decade %>% 
+animation <- bar_decade %>% 
   ggplot(aes(x = genre, y = sentiment)) +
   geom_bar(stat = "identity",   fill = "#936eb1") +
-  labs(title = "Sentiment Across The Years",
+  labs(title = "Genre Sentiment Over Time",
        x = "Genre",
-       y = "Total Sentiment", subtitle = paste("Semtiment Ranges From Optimsitic(1) to Pessimsitic(-1)",
-            "Decade: {closest_state}", sep = "\n"),
-       caption="By: Rithya Sriram \n Sources: Billboard Top 100, Genius API") + 
+       y = "Average Sentiment", subtitle ="Decade: {next_state}",
+       caption="By: Rithya Sriram | Sources: Billboard Top 100, Spotify API, NLTK") + 
   theme_minimal() +
   theme(plot.title = element_text(hjust=0.5),
         plot.subtitle = element_text(hjust=0.5)) +
-  transition_states(clean_decades, transition_length = 1, state_length = 1)
+  transition_states(wrap = FALSE,clean_decades, transition_length = 1, state_length = 1)
 
-
+animate(animation, fps = 5,end_pause=15,height=5,width=8,units="in",res=200)
+#\nSemtiment Ranges From Optimsitic(1) to Pessimsitic(-1)
 
 # run this for normal
 bar_normal <- bar %>% 
@@ -57,7 +57,7 @@ bar_normal %>%
  labs(title="Sentiment Across Genre", 
       subtitle="Semtiment Ranges From Optimsitic(1) to Pessimsitic(-1)", 
       caption="By: Rithya Sriram \n Sources: Billboard Top 100, Genius API") +
-geom_bar(stat = "identity", fill = "#cc489c") +
+geom_bar(stat = "identity", fill = "#936eb1") +
   theme_minimal()+
 theme(plot.title = element_text(hjust=0.5),
       plot.subtitle = element_text(hjust=0.5)) +
