@@ -45,9 +45,12 @@
 
   <div class="text-container">
     <p>The above graph depicts a 5-year rolling average of the percentage of positive and negative songs within the
-      end-of-year Billboard Top 100. It should be noted that certain songs were excluded from the data since they could
+      end-of-year Billboard Top 100. It should be noted that certain songs were excluded from the
+      data since they could
       not be matched to lyrics and thus could not be scored, which explains why some years might not have a percentage
-      of positive and negative songs that add up to 100.
+      of positive and negative songs that add up to 100. Songs were classified as being positive or negative based on
+      the score they recieved from NLTK's sentiment analysis, which provides a number between -1 (more negative) and 1
+      (more positive) to each song.
     </p>
     <p>
       While there are certainly fluctuations in sentiment over time, there is a general trend of negativity being more
