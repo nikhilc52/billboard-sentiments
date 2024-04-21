@@ -63,7 +63,7 @@ geom_bar(stat = "identity", fill = "#936eb1") +
         plot.subtitle = element_text(size = 16, hjust =0.5),
         axis.title = element_text(size=14,),
         axis.text.x = element_text(size=14))+
-ylab("Sentiment") + 
+ylab("Average Song Sentiment") + 
 xlab("Genre")
 
 
