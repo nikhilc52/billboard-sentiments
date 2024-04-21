@@ -19,7 +19,7 @@ All the files used in the Billboard Sentiments Project for Cornell Data Journal.
 
 ## Resources used
 
-* [Wikipedia](https://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_2023) - Used to obtain Yearly Billboard 100 Data
+* [Wikipedia](https://en.wikipedia.org/wiki/Billboard_Year-End_Hot_100_singles_of_2023) - Used to obtain yearly Billboard 100 Data
 * [LyricsGenius](https://lyricsgenius.readthedocs.io/en/master/) - Matching lyrics to song data through the GeniusAPI in Python
 * [NLTK](https://www.nltk.org/) - Obtaining sentiment scores for qualifying songs
 * [Kaggle](https://www.kaggle.com/datasets/akiboy96/spotify-dataset) - Merging songs to features obtained through SpotifyAPI
