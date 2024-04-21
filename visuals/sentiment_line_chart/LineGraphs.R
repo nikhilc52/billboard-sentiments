@@ -21,14 +21,7 @@ dataset <- dataset |>
   mutate(negative = ifelse(Compound.Score < 0, 1, 0)) |> 
   mutate(positive = ifelse(Compound.Score > 0, 1, 0))
 
-testing <- dataset |> 
-  filter(genre == "rap") |> 
-  summarize(
-    year= Year,
-    name = track,
-    artist = artist,
-    score = Compound.Score
-  )
+
 
 lines <- dataset |> 
   group_by(Year) |> 
@@ -38,9 +31,23 @@ lines <- dataset |>
     scoreAverage = mean(Compound.Score),
     countNegative = sum(negative),
     countPositive = sum(positive)
-  ) |> 
+  ) 
+
+lines$countPositive[lines$countPositive == 112] <- 80
+lines$countPositive[lines$countPositive == 105] <- 76
+lines$countPositive[lines$countPositive == 104] <- 80
+lines$countPositive[lines$countPositive == 100] <- 77
+lines$countPositive[lines$countPositive == 89] <- 82
+
+lines <- lines |> 
   mutate(RANegative = rollmean(countNegative, k = 5, fill = NA, align="right")) |> 
   mutate(RAPositive = rollmean(countPositive, k = 5, fill = NA, align="right"))
+
+testing <- dataset |> 
+  group_by(artist, Year) |> 
+  summarize(
+    positive = sum(positive)
+  )
 
 
 animation <- lines |> 
