@@ -5,7 +5,7 @@ library(ggplot2)
 library(dplyr)
 
 data <-
-  read_csv("/Users/rithyasri/Downloads/finalMatched.csv")
+  read_csv("C:\\Users\\nikhi\\Downloads\\finalMatched.csv")
 
 bar <- data %>% 
   filter(!is.na(genre)) %>% 
@@ -54,13 +54,15 @@ bar_normal <- bar %>%
 
 bar_normal %>% 
   ggplot(aes(x = reorder(genre,sentiment), y = sentiment)) +
- labs(title="Sentiment Across Genre", 
-      subtitle="Semtiment Ranges From Optimsitic(1) to Pessimsitic(-1)", 
-      caption="By: Rithya Sriram \n Sources: Billboard Top 100, Genius API") +
+ labs(title="Differences in Sentiment Across Genres", 
+      subtitle="From 1960 to 2019", 
+      caption="By: Rithya Sriram \n Sources: Billboard Top 100, NLTK") +
 geom_bar(stat = "identity", fill = "#936eb1") +
   theme_minimal()+
-theme(plot.title = element_text(hjust=0.5),
-      plot.subtitle = element_text(hjust=0.5)) +
+  theme(plot.title = element_text(size = 22, hjust =0.5, face = "bold"), 
+        plot.subtitle = element_text(size = 16, hjust =0.5),
+        axis.title = element_text(size=14,),
+        axis.text.x = element_text(size=14))+
 ylab("Sentiment") + 
 xlab("Genre")
 
