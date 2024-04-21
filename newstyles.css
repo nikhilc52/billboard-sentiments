@@ -38,6 +38,31 @@ h6,
     align-items: center;
 }
 
+.headshot-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    max-width: 70%;
+}
+
+figure {
+    margin: 0 auto;
+}
+
+table,
+td {
+    display: flexbox;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .image-container p {
     text-align: center;
     margin-top: 10px;
@@ -68,7 +93,7 @@ a {
     color: inherit;
 }
 
-.slider{
+.slider {
     -webkit-appearance: none;
     background-color: #f2f2f2;
     display: flex;
