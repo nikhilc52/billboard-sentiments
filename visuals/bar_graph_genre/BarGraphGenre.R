@@ -56,8 +56,8 @@ bar_normal %>%
   ggplot(aes(x = reorder(genre,sentiment), y = sentiment)) +
  labs(title="Differences in Sentiment Across Genres", 
       subtitle="From 1960 to 2019", 
-      caption="By: Rithya Sriram \n Sources: Billboard Top 100, NLTK") +
-geom_bar(stat = "identity", fill = "#936eb1") +
+      caption="By: Rithya Sriram \n Sources: Billboard Top 100, Spotify API, NLTK") +
+geom_bar(stat = "identity", fill = "#936eb1", width=0.7) +
   theme_minimal()+
   theme(plot.title = element_text(size = 22, hjust =0.5, face = "bold"), 
         plot.subtitle = element_text(size = 16, hjust =0.5),
