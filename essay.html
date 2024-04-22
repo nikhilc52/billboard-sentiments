@@ -29,8 +29,7 @@
 
   <div class="slider-image">
     <img id="imageToChange" src="writeups/sliders/sentiment_line/1964.png" alt="image_year" width="30%"
-      onmouseover="src='visuals/sentiment_line_chart/sentiment_line_chart_pause.gif'"
-      onmouseout="src='writeups/sliders/sentiment_line/1964.png'">
+      onmouseover="src='visuals/sentiment_line_chart/sentiment_line_chart_pause.gif'" onmouseout=updateFrame()>
   </div>
 
   <figcaption style="text-align: center; font-size: small;"><i><br>Hover over the above image to play the animation.
@@ -39,7 +38,7 @@
 
   <br>
 
-  <input type="range" id="yearID" min="1964" max="2019" value="1964" class="slider" oninput=updateImage()>
+  <input type="range" id="yearID" min="1964" max="2019" value="1964" class="slider" oninput=updateFrame()>
 
   <br><br>
 
