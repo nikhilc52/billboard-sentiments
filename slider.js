@@ -21,8 +21,8 @@ function updateImage3() {
     document.getElementById("imageToChange3").src = imageName;
 }
 
-function updateFrame() {
-    var frameID = document.getElementById("yearID").value;
-    var imageName = "writeups/sliders/sentiment_line" + "/" + frameID + ".png";
-    document.getElementById("imageToChange").src = imageName;
+function updateFrame(src, yearID, img) {
+    var frameID = document.getElementById(yearID).value;
+    var imageName = src + "/" + frameID + ".png";
+    document.getElementById(img).src = imageName;
 }
