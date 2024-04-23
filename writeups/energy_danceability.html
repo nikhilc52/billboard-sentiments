@@ -26,9 +26,10 @@
     <br><br>
 
     <div class="slider-image">
-        <img id="imageToChange" src="sliders/energy_danceability/1960.png" alt="image_year" width=40%
+        <img id="energy_danceability_img" src="sliders/energy_danceability/1960.png" alt="image_year" width=40%
             onmouseover="src='../visuals/feature_animation_scatter/scatter_end_pause.gif';"
-            onmouseout="src='sliders/energy_danceability/1960.png';">
+            onmouseout="updateFrame('sliders/energy_danceability', 'energy_danceability_year', 'energy_danceability_img')">
+
     </div>
 
     <figcaption style="text-align: center; font-size: small;"><i>Hover over the above image to play the animation.
@@ -37,7 +38,8 @@
 
     <br>
 
-    <input type="range" id="yearID" min="1960" max="2019" value="1960" class="slider" oninput=updateImage()>
+    <input type="range" id="energy_danceability_year" min="1960" max="2019" value="1960" class="slider"
+        oninput="updateFrame('sliders/energy_danceability', 'energy_danceability_year', 'energy_danceability_img')">
 
     <br><br>
 

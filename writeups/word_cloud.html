@@ -26,9 +26,9 @@
     <br><br>
 
     <div class="slider-image">
-        <img id="imageToChange" src="sliders/word_cloud/1964.png" alt="image_year" width="30%"
-            onmouseover="src='../visuals/word_cloud/word_cloud_pause.gif';"
-            onmouseout="src='sliders/word_cloud/1964.png';">
+        <img id="word_cloud_img" src="sliders/word_cloud/1964.png" alt="image_year" width="30%"
+            onmouseover="src='../visuals/word_cloud/word_cloud_pause.gif'"
+            onmouseout="updateFrame('sliders/word_cloud', 'word_cloud_year', 'word_cloud_img')">
     </div>
 
     <figcaption style="text-align: center; font-size: small;"><i><br>Hover over the above image to play the animation.
@@ -37,13 +37,15 @@
 
     <br>
 
-    <input type="range" id="yearID" min="1964" max="2023" value="1964" class="slider" oninput=updateImage()>
+    <input type="range" id="word_cloud_year" min="1964" max="2023" value="1964" class="slider"
+        oninput="updateFrame('sliders/word_cloud', 'word_cloud_year', 'word_cloud_img')">
 
     <br><br>
 
     <div class="text-container">
         <p>Above is a word cloud that shows a 5-year rolling average of the top words of Billboard Top-100 songs for a
-            given year (exluding what NLTK defines as "stop words"). The most common word in top songs was “love” until 1998, where it switched to “na” before being
+            given year (exluding what NLTK defines as "stop words"). The most common word in top songs was “love” until
+            1998, where it switched to “na” before being
             dominated by “like” and “yeah”, a trend that continues into 2024.<br><br>An interesting development within
             this data is the short period of time where “na” was the top word. While
             it has almost always been included in the top 100 songs, dating back to 1963, its dominance in the late
@@ -68,8 +70,8 @@
     <br><br>
     <div class="image-container">
         <img src="../icons/billboard sentiments_colors.png" width="3%">
-      </div>
-      <br><br>
+    </div>
+    <br><br>
 </body>
 
 <script src="../slider.js"></script>
