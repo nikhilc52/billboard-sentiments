@@ -1,6 +1,6 @@
 # CDJ-Billboard-Sentiments
 
-All the files used in the Billboard Sentiments Project for Cornell Data Journal. Article link: [http://billboardsentiments.com/](http://billboardsentiments.com/).
+All the files used in the Billboard Sentiments project for Cornell Data Journal. Article link: [http://billboardsentiments.com/](http://billboardsentiments.com/).
 
 ## Built with
 
