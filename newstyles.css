@@ -111,3 +111,7 @@ a {
     background: #52b5e7;
     cursor: pointer;
 }
+
+html{
+    scroll-behavior: smooth;
+}
