@@ -24,8 +24,21 @@
 
 <body>
 
+  <h1 style="text-align: center"><u>Evaluating NLTK's Assessment of Rap</u></h1>
+  <h3 style="text-align: center">By: Nikhil Chinchalkar</h3>
+
+  <br><br>
+  <div class="text-container">
+    <p>The below graph depicts a 5-year rolling average of the percentage of positive and negative songs within the
+      end-of-year Billboard Top 100. It should be noted that certain songs were excluded from the
+      data since they could
+      not be matched to lyrics and thus could not be scored, which explains why some years might not have a percentage
+      of positive and negative songs that add up to 100. Songs were classified as being positive or negative based on
+      the score they recieved from NLTK's sentiment analysis, which provides a number between -1 (more negative) and 1
+      (more positive) to each song.
+    </p>
+  </div>
   <br>
-  <h1 style="text-align: center">[Title]</h1>
 
   <div class="slider-image">
     <img id="sentiment_img" src="writeups/sliders/sentiment_line/1964.png" alt="image_year" width="30%"
@@ -45,14 +58,6 @@
   <br><br>
 
   <div class="text-container">
-    <p>The above graph depicts a 5-year rolling average of the percentage of positive and negative songs within the
-      end-of-year Billboard Top 100. It should be noted that certain songs were excluded from the
-      data since they could
-      not be matched to lyrics and thus could not be scored, which explains why some years might not have a percentage
-      of positive and negative songs that add up to 100. Songs were classified as being positive or negative based on
-      the score they recieved from NLTK's sentiment analysis, which provides a number between -1 (more negative) and 1
-      (more positive) to each song.
-    </p>
     <p>
       While there are certainly fluctuations in sentiment over time, there is a general trend of negativity being more
       commonly found in top songs, with a visible shift being apparent at the turn of the century. This trend of
@@ -66,12 +71,34 @@
       Spotify featured on the Top-100 list, a stark increase from the mere three Top-100 placements the genre averaged
       before the 21st century.
     </p>
-    <p>**Here’s a visual of that change [pie chart], [explain when final visual is uploaded]
+    <p>Here's a visual of that change, where each section of the pie chart represents that genre's makeup of songs on
+      that year's Billboard Hot 100:
     </p>
   </div>
 
+  <div class="slider-image">
+    <img id="pie_chart_image" src="writeups/sliders/pie_chart/1.png" alt="image_year" width=20%
+      onmouseover="src='visuals/pie_chart_year/pie_chart_final.gif';"
+      onmouseout="updateFrame('writeups/sliders/pie_chart', 'genre_year', 'pie_chart_image')">
+
+  </div>
+
+  <figcaption style="text-align: center; font-size: small;"><i>Hover over the above image to play the animation.
+      <br>Or use the slider below to adjust the year more precisely.
+    </i></figcaption>
+
+  <br>
+
+  <input type="range" id="genre_year" min="1" max="508" value="1" class="slider"
+    oninput="updateFrame('writeups/sliders/pie_chart', 'genre_year', 'pie_chart_image')">
+
+  <br><br>
+
   <div class="text-container">
-    <p> This evidence, combined with the fact that rap is an outlier for its much more negative sentiment score, as
+    <p>As described above, the rap genre suddenly takes up a substantial section of the pie chart (and
+      the Billboard 100) around the year 2000. This evidence of growth, combined with the fact that rap is an outlier
+      for its much
+      more negative sentiment score, as
       indicated by the graph below, backs up the notion that the trend in musical negativity might stem from the rap
       genre.</p>
   </div>
