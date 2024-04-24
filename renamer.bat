@@ -1,8 +1,8 @@
 @echo off
 setlocal enabledelayedexpansion
 
-set "directory=C:\Users\nikhi\OneDrive\Documents\GitHub\billboard-sentiments\writeups\sliders\sentiment_line"
-set "year=1964"
+set "directory=C:\Users\nikhi\OneDrive\Documents\GitHub\billboard-sentiments\writeups\sliders\pie_chart"
+set "year=1"
 
 cd "%directory%"
 
