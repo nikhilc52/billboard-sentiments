@@ -38,6 +38,17 @@ h6,
     align-items: center;
 }
 
+.spotify-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spotify-container h3{
+    margin-right: 25px;
+    padding-bottom: 20px;
+}
+
 .headshot-container {
     margin: 0 auto;
     display: flex;
